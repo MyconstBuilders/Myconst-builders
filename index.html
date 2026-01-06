@@ -227,20 +227,30 @@
     </div>
   </section>
 
-  <!-- BLOG -->
-  <section id="blog">
-    <h2>Our Blog</h2>
-    <div class="grid">
+ <section id="blog">
+  <h2>Our Blog</h2>
+  <div id="blogGrid" class="grid"></div>
+</section>
+
+<script>
+async function loadBlog() {
+  const res = await fetch(`${BACKEND}/api/blog`);
+  const posts = await res.json();
+  const grid = document.getElementById("blogGrid");
+
+  grid.innerHTML = "";
+  posts.forEach(p => {
+    grid.innerHTML += `
       <div class="card">
-        <h3>Paving Solutions in Kenya</h3>
-        <p>Why cabro and interlocking paving improves durability.</p>
-      </div>
-      <div class="card">
-        <h3>Choosing a Construction Company</h3>
-        <p>Key factors clients should consider before building.</p>
-      </div>
-    </div>
-  </section>
+        <img src="${BACKEND}${p.image}">
+        <h3>${p.title}</h3>
+        <p>${p.content.substring(0, 120)}...</p>
+      </div>`;
+  });
+}
+loadBlog();
+</script>
+
 
   <!-- CONTACT -->
   <section id="contact">
@@ -300,5 +310,6 @@
 
 </body>
 </html>
+
 
 
