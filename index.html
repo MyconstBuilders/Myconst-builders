@@ -69,7 +69,25 @@
   <a href="#projects">Projects</a>
   <a href="#gallery">Gallery</a>
   <a href="#contact">Contact</a>
+  <a href="#blog">Blog</a>
 </nav>
+  
+.slider {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
 
 <section id="about">
   <h2>About Us</h2>
@@ -124,6 +142,34 @@
   <h3>Ruai Office</h3>
   <iframe src="https://www.google.com/maps?q=Ruai,Nairobi&output=embed"></iframe>
 </section>
+<section id="blog">
+  <h2>Our Blog</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Quality Paving Solutions in Kenya</h3>
+      <p>Why proper paving improves durability, safety, and aesthetics.</p>
+    </div>
+
+    <div class="card">
+      <h3>Project Management Best Practices</h3>
+      <p>How MyConst Builders delivers projects on time and on budget.</p>
+    </div>
+  </div>
+</section>
+<section id="paving">
+  <h2>Paving Solutions</h2>
+  <p>
+    MyConst Builders provides high-quality paving solutions for
+    residential, commercial, and industrial projects.
+  </p>
+
+  <ul>
+    <li>Cabro & interlocking blocks</li>
+    <li>Driveways & parking lots</li>
+    <li>Walkways & landscaping paving</li>
+    <li>Drainage-integrated paving</li>
+  </ul>
+</section>
 
 <footer>
   <p>© 2026 MyConst Builders. All Rights Reserved.</p>
@@ -161,6 +207,17 @@ setInterval(loadGallery, 5000);
 
 </body>
 </html>
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+}, 4000);
+</script>
+
 
 
 
