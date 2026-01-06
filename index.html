@@ -1,63 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyConst Builders | Building with Integrity & Excellence</title>
-<section id="slideshow">
-  <div class="slider">
-    <img src="assets/slide1.jpg" class="slide active">
-    <img src="assets/slide2.jpg" class="slide">
-    <img src="assets/slide3.jpg" class="slide">
-  </div>
-</section>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyConst Builders | Building with Integrity & Excellence</title>
 
-  <style>
-    body{
-      margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.6;
-      background:#f8fafc;color:#0f172a
-    }
-    header{
-      background:#020617;color:#fff;padding:30px 20px;text-align:center
-    }
-    header img{max-width:180px;margin-bottom:10px}
-    nav{
-      background:#0f172a;padding:10px;text-align:center
-    }
-    nav a{
-      color:#fff;margin:0 15px;text-decoration:none;font-weight:bold
-    }
-    nav a:hover{color:#38bdf8}
+<style>
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+  background:#f8fafc;
+  color:#0f172a;
+}
 
-    section{padding:60px 20px;max-width:1100px;margin:auto}
-    h2{text-align:center;margin-bottom:30px}
+header{
+  background:#020617;
+  color:#fff;
+  padding:30px 20px;
+  text-align:center;
+}
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-    .card{
-      background:#fff;padding:20px;border-radius:8px;
-      box-shadow:0 4px 10px rgba(0,0,0,.08)
-    }
+header img{
+  max-width:180px;
+  margin-bottom:10px;
+}
 
-    .card img{width:100%;border-radius:8px}
+nav{
+  background:#0f172a;
+  padding:10px;
+  text-align:center;
+}
 
-    footer{
-      background:#020617;color:#fff;text-align:center;padding:30px
-    }
+nav a{
+  color:#fff;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    iframe{width:100%;border:0;height:300px;border-radius:8px}
+nav a:hover{color:#38bdf8;}
 
-    .whatsapp{
-      position:fixed;bottom:20px;right:20px;background:#25D366;
-      color:#fff;padding:15px 18px;border-radius:50%;font-size:22px;
-      text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,.3)
-    }
-  </style>
+section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+h2{text-align:center;margin-bottom:30px;}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.card img{width:100%;border-radius:8px;}
+
+footer{
+  background:#020617;
+  color:#fff;
+  text-align:center;
+  padding:30px;
+}
+
+iframe{
+  width:100%;
+  border:0;
+  height:300px;
+  border-radius:8px;
+}
+
+/* Slideshow */
+.slider{
+  position:relative;
+  max-width:1100px;
+  margin:auto;
+  overflow:hidden;
+  border-radius:10px;
+}
+
+.slide{
+  width:100%;
+  display:none;
+}
+
+.slide.active{display:block;}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px 18px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
+  box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="assets/logo.png" alt="MyConst Builders Logo" />
+  <img src="assets/logo.png" alt="MyConst Builders Logo">
   <h1>MYCONST BUILDERS</h1>
   <p><strong>Building with Integrity & Excellence</strong></p>
 </header>
@@ -68,26 +123,17 @@
   <a href="#values">Core Values</a>
   <a href="#projects">Projects</a>
   <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
   <a href="#blog">Blog</a>
+  <a href="#contact">Contact</a>
 </nav>
-  
-.slider {
-  position: relative;
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 10px;
-}
 
-.slide {
-  width: 100%;
-  display: none;
-}
-
-.slide.active {
-  display: block;
-}
+<section id="slideshow">
+  <div class="slider">
+    <img src="assets/slide1.jpg" class="slide active">
+    <img src="assets/slide2.jpg" class="slide">
+    <img src="assets/slide3.jpg" class="slide">
+  </div>
+</section>
 
 <section id="about">
   <h2>About Us</h2>
@@ -105,6 +151,7 @@
     <div class="card">Architectural Design & Planning</div>
     <div class="card">Project Management</div>
     <div class="card">Renovation & Maintenance</div>
+    <div class="card">Paving Solutions</div>
   </div>
 </section>
 
@@ -131,6 +178,30 @@
   <div id="galleryGrid" class="grid"></div>
 </section>
 
+<section id="blog">
+  <h2>Our Blog</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Quality Paving Solutions in Kenya</h3>
+      <p>Why proper paving improves durability, safety, and aesthetics.</p>
+    </div>
+    <div class="card">
+      <h3>Project Management Best Practices</h3>
+      <p>How MyConst Builders delivers projects on time and on budget.</p>
+    </div>
+  </div>
+</section>
+
+<section id="paving">
+  <h2>Paving Solutions</h2>
+  <ul>
+    <li>Cabro & interlocking blocks</li>
+    <li>Driveways & parking lots</li>
+    <li>Walkways & landscaping paving</li>
+    <li>Drainage-integrated paving</li>
+  </ul>
+</section>
+
 <section id="contact">
   <h2>Contact Us</h2>
   <p><strong>Phone:</strong> +254 769 236 528</p>
@@ -142,34 +213,6 @@
   <h3>Ruai Office</h3>
   <iframe src="https://www.google.com/maps?q=Ruai,Nairobi&output=embed"></iframe>
 </section>
-<section id="blog">
-  <h2>Our Blog</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Quality Paving Solutions in Kenya</h3>
-      <p>Why proper paving improves durability, safety, and aesthetics.</p>
-    </div>
-
-    <div class="card">
-      <h3>Project Management Best Practices</h3>
-      <p>How MyConst Builders delivers projects on time and on budget.</p>
-    </div>
-  </div>
-</section>
-<section id="paving">
-  <h2>Paving Solutions</h2>
-  <p>
-    MyConst Builders provides high-quality paving solutions for
-    residential, commercial, and industrial projects.
-  </p>
-
-  <ul>
-    <li>Cabro & interlocking blocks</li>
-    <li>Driveways & parking lots</li>
-    <li>Walkways & landscaping paving</li>
-    <li>Drainage-integrated paving</li>
-  </ul>
-</section>
 
 <footer>
   <p>© 2026 MyConst Builders. All Rights Reserved.</p>
@@ -178,36 +221,7 @@
 <a class="whatsapp" href="https://wa.me/254769236528" target="_blank">💬</a>
 
 <script>
-const BACKEND = "https://your-backend.onrender.com";
-const gallery = document.getElementById("galleryGrid");
-
-async function loadGallery() {
-  const res = await fetch(`${BACKEND}/api/gallery`);
-  const images = await res.json();
-
-  gallery.innerHTML = "";
-
-  images.forEach(img => {
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = `
-      <img src="${BACKEND}${img.url}" alt="Project Image">
-    `;
-    gallery.appendChild(div);
-  });
-}
-
-// Load once when page opens
-loadGallery();
-
-// 🔁 Auto-refresh every 5 seconds
-setInterval(loadGallery, 5000);
-</script>
-
-
-</body>
-</html>
-<script>
+/* Slideshow */
 let slides = document.querySelectorAll('.slide');
 let index = 0;
 
@@ -216,8 +230,26 @@ setInterval(() => {
   index = (index + 1) % slides.length;
   slides[index].classList.add('active');
 }, 4000);
+
+/* Gallery Backend */
+const BACKEND = "https://your-backend.onrender.com";
+const gallery = document.getElementById("galleryGrid");
+
+async function loadGallery(){
+  const res = await fetch(`${BACKEND}/api/gallery`);
+  const images = await res.json();
+  gallery.innerHTML = "";
+  images.forEach(img=>{
+    const div=document.createElement("div");
+    div.className="card";
+    div.innerHTML=`<img src="${BACKEND}${img.url}">`;
+    gallery.appendChild(div);
+  });
+}
+
+loadGallery();
+setInterval(loadGallery,5000);
 </script>
 
-
-
-
+</body>
+</html>
