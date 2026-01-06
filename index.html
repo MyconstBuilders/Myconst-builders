@@ -125,14 +125,15 @@
 <a class="whatsapp" href="https://wa.me/254769236528" target="_blank">💬</a>
 
 <script>
-fetch('https://YOUR-BACKEND-URL/api/gallery')
+fetch('https://myconst-backend.onrender.com/api/gallery')
   .then(res => res.json())
   .then(images => {
     const gallery = document.getElementById('galleryGrid');
     images.forEach(img => {
       const div = document.createElement('div');
       div.className = 'card';
-      div.innerHTML = `<img src="https://YOUR-BACKEND-URL${img.url}" alt="Project">`;
+      div.innerHTML = `<img src="https://myconst-backend.onrender.com${img.url}">
+ alt="Project">`;
       gallery.appendChild(div);
     });
   })
@@ -141,3 +142,4 @@ fetch('https://YOUR-BACKEND-URL/api/gallery')
 
 </body>
 </html>
+
