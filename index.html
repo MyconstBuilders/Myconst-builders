@@ -180,22 +180,28 @@
 
 <section id="gallery" class="section">
   <h3>Project Gallery</h3>
-  <p>Some of our completed and ongoing construction projects.</p>
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:25px;">
-    <div class="card">
-      <img src="project1.jpg" alt="Modern Maisonette Project" style="width:100%; border-radius:8px; margin-bottom:10px;">
-      <h4>Modern Maisonette</h4>
-      <p>High-end residential construction showcasing modern finishes and structural excellence.</p>
-    </div>
-    <div class="card">
-      <img src="project2.jpg" alt="Bungalow Residential Project" style="width:100%; border-radius:8px; margin-bottom:10px;">
-      <h4>Residential Bungalow</h4>
-      <p>Quality masonry, roofing, and finishing works delivered to client specifications.</p>
-    </div>
-  </div>
+  <div id="galleryGrid" class="services"></div>
 </section>
 
-<section id="about" class="section about"> class="section about">
+<script>
+fetch('https://YOUR-BACKEND-URL/api/gallery')
+  .then(res => res.json())
+  .then(images => {
+    const gallery = document.getElementById('galleryGrid');
+    images.forEach(img => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="https://YOUR-BACKEND-URL${img.url}" style="width:100%;border-radius:8px;">
+      `;
+      gallery.appendChild(card);
+    });
+  });
+</script>
+
+</section>
+
+<section id="about" class="section about"> 
   <h3>About MyConst Builders</h3>
   <p>
     MyConst Builders is committed to delivering reliable, safe, and sustainable construction solutions.
@@ -241,3 +247,4 @@
 
 </body>
 </html>
+
