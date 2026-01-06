@@ -125,21 +125,34 @@
 <a class="whatsapp" href="https://wa.me/254769236528" target="_blank">💬</a>
 
 <script>
-fetch('https://myconst-backend.onrender.com/api/gallery')
-  .then(res => res.json())
-  .then(images => {
-    const gallery = document.getElementById('galleryGrid');
-    images.forEach(img => {
-      const div = document.createElement('div');
-      div.className = 'card';
-      div.innerHTML = `<img src="https://myconst-backend.onrender.com${img.url}">
- alt="Project">`;
-      gallery.appendChild(div);
-    });
-  })
-  .catch(err => console.error(err));
+const BACKEND = "https://your-backend.onrender.com";
+const gallery = document.getElementById("galleryGrid");
+
+async function loadGallery() {
+  const res = await fetch(`${BACKEND}/api/gallery`);
+  const images = await res.json();
+
+  gallery.innerHTML = "";
+
+  images.forEach(img => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <img src="${BACKEND}${img.url}" alt="Project Image">
+    `;
+    gallery.appendChild(div);
+  });
+}
+
+// Load once when page opens
+loadGallery();
+
+// 🔁 Auto-refresh every 5 seconds
+setInterval(loadGallery, 5000);
 </script>
+
 
 </body>
 </html>
+
 
